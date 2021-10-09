@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="./style.css" rel="stylesheet" type="text/css">
+    <title>My Portfolio</title>
+</head>
+
+<body>
+    <nav>
+        <h1 id="logo">Michał Wiechowski</h1>
+        <ul>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about-me">
+            <div class="aboutMeContainer">
+                <div class="aboutMeTextContainer">
+                    <h2>About Me</h2>
+                    <p>Hi! I'm Michał Wiechowski, a student from Techniczne Zakłady Naukowe in Poland, studying in the IT departament.</p>
+                    <p>I am a good student, currently heading towards becoming the next IT specialist in my school.</p>
+                    <p>In my free time I like to play computer games, watch movies and expand my programming skills. I'd love to make it big some day.</p>
+                    <p>Fun fact! I've been alive for <span id="time"></span> seconds!</p>
+                </div>
+
+                <img src="./rsrc/profile.jpg" alt="A photo of the author." class="portrait">
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <details class="project">
+                <summary class="projectTitle">
+                    <h3>Tea Cozy</h3>
+                </summary>
+                <img src="./rsrc/projects/teacozy.png" alt="Tea Cozy project landing zone." class="projectImage">
+                <p class="classDesc">A page I've created as one of the Codecademy course lessons.</p>
+            </details>
+
+            <details class="project">
+                <summary class="projectTitle">
+                    <h3>South Village Run Club</h3>
+                </summary>
+                <img src="./rsrc/projects/runningclub.png" alt="South Village Run Club landing zone." class="projectImage">
+                <p class="classDesc">Another page I've created as one of the Codecademy course lessons.</p>
+            </details>
+
+            <details class="project">
+                <summary class="projectTitle">
+                    <h3>Excursion App</h3>
+                </summary>
+                <img src="./rsrc/projects/excursion.png" alt="Excursion phone app." class="projectImage">
+                <p class="classDesc">This is a page for a phone app that enables easy traveling for everyone.</p>
+            </details>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div id="skillsContainer">
+                <div class="skillIcons">HTML5</div>
+                <div class="skillIcons">CSS3</div>
+                <div class="skillIcons">JS</div>
+                <div class="skillIcons">GIT</div>
+                <div class="skillIcons">CHROME</div>
+                <div class="skillIcons">GITHUB</div>
+                <div class="skillIcons">NODE</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Made with <span class="heart">♥</span> in Poland
+    </footer>
+
+    <script>   
+        const timeContainer = document.getElementById("time");
+        const BIRTH_DAY = "8-26-2002";
+        const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+        const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+        setInterval(() => {
+            const now = new Date();
+            const difference = Math.floor(
+                (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+            );
+
+            timeContainer.innerText = intlNumberFormatter.format(difference);
+        }, 1000);
+    </script>
+</body>
+</html>

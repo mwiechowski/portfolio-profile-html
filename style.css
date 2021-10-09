@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+}
+
+#logo {
+    font-size: 2rem;
+}
+
+nav {
+    font-family: Montserrat, sans-serif;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin: 0px 0px 0px auto;
+    font-size: 1.25rem;
+    padding-left: 1rem;
+}
+
+nav ul li {
+    margin: 0 0.5rem;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+}
+
+section {
+    padding: 1rem 0;
+}
+
+.aboutMeContainer {
+    display: flex;
+}
+
+.aboutMeTextContainer {
+    margin-right: 1rem;
+}
+
+h2 {
+    font-family: Montserrat, sans-serif;
+    margin: 0 0 0.8rem 0; 
+}
+
+.portrait {
+    flex-shrink: 1;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.aboutMeTextContainer p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+summary {
+    list-style-image: url("/rsrc/greater-than-symbol.png");
+}
+
+h3 {
+    display: inline;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+}
+
+.projectImage {
+    width: 500px;
+}
+
+details {
+    cursor: pointer;
+}
+
+summary h3:hover {
+    background-color: rgba(0.3, 0.3, 0.3, 0.1);
+}
+
+#skillsContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.skillIcons {
+    display: inline-block;
+    letter-spacing: 0.3rem;
+    margin-right: 0.8rem;
+}
+
+footer {
+    margin-top: auto;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.heart {
+    color: red;
+}
+
+#contact {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#contact p, #contact a{
+    padding-top: 1rem;
+}
+
+@media only screen and (max-width: 730px){
+    .aboutMeContainer {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .portrait {
+        align-self: center;
+        width: 250px;
+    }
+    
+    .projectImage {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 436px){
+    nav {
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+    }
+
+    nav ul {
+        font-size: 1.25rem;
+        margin: 0;
+        padding: 0.5rem 0 0 0;
+    }
+
+    #logo {
+        text-align: center;
+    }
+
+    .projectImage {
+        width: 400px;
+    }
+}
