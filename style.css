@@ -89,11 +89,15 @@ h3 {
 }
 
 .projectImage {
-    width: 500px;
+    width: 100%;
 }
 
 details {
     cursor: pointer;
+}
+
+details p{
+    padding-bottom: 2rem;
 }
 
 summary h3:hover {
@@ -146,10 +150,6 @@ footer {
     .portrait {
         align-self: center;
         width: 250px;
-    }
-    
-    .projectImage {
-        width: 100%
     }
 }
 
