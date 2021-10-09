@@ -149,7 +149,7 @@ footer {
     }
     
     .projectImage {
-        width: 400px;
+        width: 100%
     }
 }
 
@@ -167,9 +167,5 @@ footer {
 
     #logo {
         text-align: center;
-    }
-
-    .projectImage {
-        width: 400px;
     }
 }
